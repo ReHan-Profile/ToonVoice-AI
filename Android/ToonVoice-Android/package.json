@@ -1,0 +1,28 @@
+{
+  "name": "toonvoice-studio-android",
+  "version": "2.6.0",
+  "private": true,
+  "description": "ToonVoice Studio Android application source (Capacitor + Vite)",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "prebuild": "node scripts/copy-ffmpeg-assets.mjs",
+    "build": "vite build",
+    "android:add": "npx cap add android",
+    "android:sync": "npm run build && npx cap sync android",
+    "android:open": "npx cap open android",
+    "android:build": "npm run build && npx cap sync android && npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/filesystem": "^7.1.4",
+    "@capacitor/share": "^7.0.2",
+    "@ffmpeg/ffmpeg": "0.12.10",
+    "@ffmpeg/core": "0.12.6",
+    "@ffmpeg/util": "0.12.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3",
+    "vite": "^6.4.1"
+  }
+}

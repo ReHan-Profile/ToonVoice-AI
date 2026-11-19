@@ -1,0 +1,9 @@
+ToonVoice Studio Android v2.3
+- Added Vite build pipeline so Capacitor native plugin imports are bundled.
+- Added Capacitor Filesystem + Share dependencies for Android MP4 save/share.
+- Added native Documents/ToonVoice save flow with browser fallback.
+- Reduced intermediate pixel-processing canvas width to 720px for smoother mobile preview/render.
+- Added Android render guards: 90-second clips and 80 MB intermediate capture cap.
+- Improved render cleanup, trim validation and source replacement handling.
+- Clarified actual scope: current styles are image-processing effects, not neural AI conversion; 3D Depth Look is not 3D model generation; voice presets are pitch/EQ, not neural voice conversion.
+- JavaScript syntax check passed. npm install and Android APK/device tests not run in this environment.

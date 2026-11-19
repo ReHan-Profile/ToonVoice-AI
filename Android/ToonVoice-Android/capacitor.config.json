@@ -1,0 +1,6 @@
+{
+  "appId": "com.toonvoice.studio",
+  "appName": "ToonVoice Studio",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

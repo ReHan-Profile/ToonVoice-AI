@@ -1,0 +1,17 @@
+ToonVoice Studio Android - v2.4 hardening pass
+
+- Reworked video import state handling with a load token to ignore stale events.
+- Added loadedmetadata / loadeddata / canplay readiness handling and a 15-second diagnostic timeout.
+- Clear previous preview URLs, MP4 preview state, and export state when a new source is selected.
+- Improved unsupported codec and empty-file diagnostics.
+- Preserve the rendered MP4 retry control after conversion failure.
+- Reset the FFmpeg instance after a conversion failure so retry can create a fresh worker/runtime.
+- Fall back to a browser download if native filesystem/share saving fails.
+- Corrected misleading feature names: the depth-look effect is not 3D generation; voice presets are pitch/EQ treatments, not neural voice conversion; compressor is not Dolby processing.
+
+Known limitations (not represented as completed features):
+- True AI 2D/Anime/Comic/Sketch video-to-video conversion is not integrated.
+- True 3D mesh/character generation and 3D rendering are not integrated.
+- Neural voice conversion, voice cloning, and expressive age/gender voice models are not integrated.
+- MP4 export still uses a real-time MediaRecorder intermediate plus FFmpeg WebAssembly conversion and requires a compatible Android WebView and first-run network access.
+- Large or long videos may exceed Android WebView memory. A native FFmpeg/MediaCodec pipeline is the next engineering step for production-grade reliability.

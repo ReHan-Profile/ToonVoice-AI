@@ -1,0 +1,43 @@
+{
+  "name": "toonvoice-studio-pro",
+  "version": "2.6.0",
+  "description": "ToonVoice Studio Pro desktop video and audio editor",
+  "main": "main.js",
+  "author": "ToonVoice Studio",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "^34.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0"
+  },
+  "build": {
+    "appId": "com.toonvoice.studio",
+    "productName": "ToonVoice Studio Pro",
+    "files": [
+      "main.js",
+      "preload.js",
+      "app/**/*",
+      "node_modules/ffmpeg-static/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "directories": {
+      "output": "dist"
+    }
+  }
+}

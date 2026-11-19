@@ -1,0 +1,5 @@
+ToonVoice Studio Android - v2.6.0
+- Removed runtime CDN loading for FFmpeg WebAssembly; JS/WASM/worker assets are copied into the app's local public assets before build.
+- Added local package dependencies for FFmpeg WebAssembly.
+- Improved H.264/AAC export quality settings and added MP4 title/artist/copyright/comment/encoder metadata.
+- Clarified remaining neural AI model limitations; no unlicensed or placeholder model weights are represented as working AI.

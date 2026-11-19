@@ -1,0 +1,13 @@
+import { mkdir, copyFile } from 'node:fs/promises';
+import { createRequire } from 'node:module';
+import path from 'node:path';
+const require = createRequire(import.meta.url);
+const coreEntry = require.resolve('@ffmpeg/core');
+const ffmpegEntry = require.resolve('@ffmpeg/ffmpeg');
+const out = path.resolve('public/ffmpeg');
+await mkdir(out, { recursive: true });
+await copyFile(coreEntry, path.join(out, 'ffmpeg-core.js'));
+await copyFile(path.join(path.dirname(coreEntry), 'ffmpeg-core.wasm'), path.join(out, 'ffmpeg-core.wasm'));
+const worker = path.resolve(path.dirname(ffmpegEntry), '../esm/worker.js');
+await copyFile(worker, path.join(out, 'worker.js'));
+console.log('Bundled local FFmpeg WebAssembly assets into public/ffmpeg');

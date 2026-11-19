@@ -1,0 +1,5 @@
+ToonVoice Studio Windows - v2.6.0
+- Confirmed native FFmpeg is packaged through ffmpeg-static; no runtime CDN is used for export.
+- Improved H.264/AAC export quality settings and added MP4 title/artist/copyright/comment/encoder metadata.
+- Corrected FFmpeg fallback note: EQ and level processing are already baked into recorded audio.
+- Clarified remaining neural AI model limitations; no unlicensed or placeholder model weights are represented as working AI.

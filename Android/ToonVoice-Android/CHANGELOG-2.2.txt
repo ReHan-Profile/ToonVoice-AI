@@ -1,0 +1,10 @@
+ToonVoice Studio Android Source 2.2
+- Visible source-video player controls added.
+- Safer file import and metadata/error handling.
+- FFmpeg WASM MP4 conversion path for Capacitor origin.
+- Explicit worker URL blob loading to avoid file:// origin-null worker failure.
+- MP4 preview and retry/download control.
+- Render end detection fallback via timeupdate.
+- Node JavaScript syntax check passed.
+- APK build and real Android device testing not performed in this environment.
+- Android MP4 save action now prefers the native share sheet (when Web Share file support is available), with browser download fallback.

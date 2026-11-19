@@ -1,0 +1,8 @@
+Third-party components
+
+Android: @ffmpeg/ffmpeg 0.12.10, @ffmpeg/core 0.12.6, @ffmpeg/util 0.12.1, Capacitor, Vite.
+Windows: ffmpeg-static, Electron, electron-builder.
+
+FFmpeg licensing depends on the exact binary build configuration and enabled codecs. Before distributing installers/APKs publicly, include the license texts and corresponding source/offers required by the exact FFmpeg build and verify whether the binary is LGPL or GPL configured. Do not remove third-party copyright notices.
+
+Application output metadata tags identify ToonVoice Studio Pro and Copyright 2026 ToonVoice Studio. These tags do not replace legal license notices for third-party codecs or libraries.
