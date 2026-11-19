@@ -1,0 +1,18 @@
+ToonVoice-AI README correction
+
+Replace these two files at the repository root:
+1. README.md
+2. README-UR.md
+
+The corrected documents refer to the existing repository ReHan-Profile/ToonVoice-AI. They do not ask you to create another repository.
+
+GitHub web upload method:
+- Open the repository root.
+- Open README.md, choose the pencil (Edit) button, replace its contents with the new README.md, and commit to main.
+- Repeat for README-UR.md.
+
+The two existing workflow files were checked at:
+.github/workflows/android-apk.yml
+.github/workflows/windows-installer.yml
+
+After replacing the docs, open Actions and run both workflows manually.
